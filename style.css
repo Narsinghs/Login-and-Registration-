@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	/* Optional: Keeps the background fixed while scrolling */
+	background-position: center;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.background-image {
+	background-image: url('bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	/* Optional: Keeps the background fixed while scrolling */
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-form {
+
+	background-color: rgba(226, 233, 151, 0.7);
+	padding: 50px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+
+}
+
+.hidden {
+	display: none;
+}

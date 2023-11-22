@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Viram Clothing Brand</title>
+    <style>
+        /* Add or modify your existing CSS */
+        body {
+    margin: 0;
+    padding: 0;
+    background-image: url('VIRAM.png');
+    background-size: cover;
+    background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+    background-position: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background-image: url('VIRAM.png');
+    background-size: cover;
+    background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar {
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    width: 50px; 
+    border-radius: 700px;
+    /* Adjust the logo size */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon,
+.user-icon,
+.cart-icon {
+    margin-left: 20px;
+    
+}
+
+.cart-icon:hover{
+    background-color: blanchedalmond;
+}
+.search-icon:hover{
+    background-color: blanchedalmond;
+}
+.user-icon:hover{
+    background-color: blanchedalmond;
+}
+
+/* Add styling for the search, user, and cart icons if needed */
+
+    </style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img class="img" src="VIRAM.png" alt="Viram Clothing Brand">
+        </div>
+        <ul class="menu">
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Juniors</a></li>
+            <li><a href="#">Kids</a></li>
+        </ul>
+        <div class="icons">
+            <div class="search-icon">
+                <i class='bx bx-search' ></i>
+            </div>
+            <div class="user-icon">
+                <i class='bx bx-user' ></i>
+            </div>
+            <div class="cart-icon">
+                <i class='bx bx-cart'></i>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="search-bar">
+        <!-- Add your search input and submit button here -->
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+    </div>
+    <script>
+        // JavaScript code for handling icon clicks and interactions
+        const icons = document.querySelectorAll('.popup-trigger');
+        const popups = document.querySelectorAll('.popup');
+        const buyNowButton = document.getElementById("buy-now");
+        const cartItems = document.getElementById("cart-items");
+
+        icons.forEach((icon, index) => {
+            icon.addEventListener("click", () => {
+                popups.forEach((popup, popupIndex) => {
+                    if (popupIndex === index) {
+                        popup.style.display = "block";
+                    } else {
+                        popup.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        // Handle "Buy Now" button click
+        buyNowButton.addEventListener("click", () => {
+            // Implement the functionality to complete the purchase (e.g., redirect to a checkout page)
+            alert("Buy Now clicked. Implement the purchase logic here.");
+        });
+
+        // Handle adding a product to the cart
+        document.querySelector(".cart-icon").addEventListener("click", () => {
+            const product = "Product Name"; // Replace with the actual product information
+            const li = document.createElement("li");
+            li.textContent = product;
+            cartItems.appendChild(li);
+            popups.forEach((popup) => (popup.style.display = "none"));
+        });
+    </script>
+</body>
+</html>

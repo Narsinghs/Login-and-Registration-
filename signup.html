@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Registration</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-image: url('bg.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			/* Optional: Keeps the background fixed while scrolling */
+			background-position: center;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.background-image {
+			background-image: url('bg.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			/* Optional: Keeps the background fixed while scrolling */
+			background-position: center;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		.register-form {
+
+			max-width: 300px;
+			margin: 300px auto;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			background-color: rgba(218, 234, 186, 0.8);
+			/* Add an overlay background color for better readability */
+		}
+
+		.register-form h2 {
+			text-align: center;
+		}
+
+		.register-form form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.register-form label {
+			margin: 10px 0;
+		}
+
+		.register-form input[type="text"],
+		.register-form input[type="password"] {
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.register-form input[type="submit"] {
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="register-form" >
+		<h2>Register</h2>
+		<form action="RegisterServlet" method="post">
+			<label for="new-username"> Username:</label>
+			<input type="text" id="new-username" name="name" required>
+
+			<label for "new-password">Password:</label>
+			<input type="password" id="new-password" name="password" required>
+			<br>
+
+			<input type="submit" value="Register">
+		</form>
+		<div class="login-link">
+			<p>Already have an account? <a href="index.html">Login</a></p>
+		</div>
+	</div>
+
+</body>
+
+</html>
